@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" href="/static/css/main.css" rel="stylesheet"/>
+  <link type="text/css" href="/static/css/sandbox.css" rel="stylesheet"/>
+  <script type="text/javascript" src="/static/js/lib/external/jquery.js"></script>
+  <script type="text/javascript" src="/static/js/lib/external/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/static/js/lib/external/angular.js"></script>
+  <script type="text/javascript" src="/static/js/lib/external/less.js"></script>
+  <meta name="robots" content="noindex">
+  
+  <title>ParseHub: Showtimes</title>
+  <meta name="description"
+        content="List of movie showtimes.">
+  <style>
+    body {
+      font-family: Verdana;
+      font-size: 10pt;
+    }
+    li img {
+      margin: 5px 15px 5px 5px;
+      height: 145px;
+      vertical-align: top;
+      float: left;
+      max-width: 100px;
+    }
+    .borderbox {
+      border: 2px solid black;
+      padding: 5px 10px;
+      margin: 5px;
+    }
+    .movielist {
+      display: flex;
+      flex: 0 0 auto;
+      flex-direction: column;
+      justify-content:center;
+      width: 675px;
+      margin: auto;
+    }
+    .theatres {
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .showtimes {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .theatre {
+      flex: 0 0 80px
+    }
+    .showtime {
+      flex: 0 0 90px
+    }
+    .header {
+      font-size: 20pt;
+      text-align: center
+    }
+    .title {
+      font-size: 12pt;
+    }
+  </style>
+
+</head>
+<body ng-app>
+<nav class="navbar navbar-default nav-sandbox" role="navigation">
+  <div class="navbar-header">
+    <span class="navbar-brand">
+      <a rel="home" href="/" title="ParseHub Easily Extract Data from the Web">
+        <img src="/static/images/parsehub_logo3.svg" width="110px"/>
+      </a>
+    </span>
+  </div>
+</nav>
+<div style="padding: 19px;">
+  
+
+
+
+
+
+
+
+<div>
+  <div class="movielist">
+    <div class="header">Movie Showtimes (1 - 10 of 80 movies)</div>
+    <br>
+    <ul style="list-style-type: none;">
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="movie">
+            <span class="image">
+                    <img alt="The Shawshank Redemption" src="https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=The Shawshank Redemption">The Shawshank Redemption</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax first">06:00 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular first">06:00 PM</span>
+                  <span class="borderbox showtime regular first">06:15 PM</span>
+                  <span class="borderbox showtime regular first">09:30 PM</span>
+                  <span class="borderbox showtime regular first">09:45 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="movie">
+            <span class="image">
+                    <img alt="Schindler&#39;s List" src="https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=Schindler&#39;s List">Schindler&#39;s List</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">06:15 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">06:15 PM</span>
+                  <span class="borderbox showtime regular other">06:30 PM</span>
+                  <span class="borderbox showtime regular other">09:45 PM</span>
+                  <span class="borderbox showtime regular other">10:00 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="movie">
+            <span class="image">
+                    <img alt="The Godfather" src="https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=The Godfather">The Godfather</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">06:30 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">06:30 PM</span>
+                  <span class="borderbox showtime regular other">06:45 PM</span>
+                  <span class="borderbox showtime regular other">10:00 PM</span>
+                  <span class="borderbox showtime regular other">10:15 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="movie">
+            <span class="image">
+                    <img alt="The Godfather: Part II" src="https://upload.wikimedia.org/wikipedia/en/0/03/Godfather_part_ii.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=The Godfather: Part II">The Godfather: Part II</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">06:45 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">06:45 PM</span>
+                  <span class="borderbox showtime regular other">07:00 PM</span>
+                  <span class="borderbox showtime regular other">10:15 PM</span>
+                  <span class="borderbox showtime regular other">10:30 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="movie">
+            <span class="image">
+                    <img alt="The Dark Knight" src="https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=The Dark Knight">The Dark Knight</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">07:00 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">07:00 PM</span>
+                  <span class="borderbox showtime regular other">07:15 PM</span>
+                  <span class="borderbox showtime regular other">10:30 PM</span>
+                  <span class="borderbox showtime regular other">10:45 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="movie">
+            <span class="image">
+                    <img alt="Pulp Fiction" src="https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=Pulp Fiction">Pulp Fiction</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">07:15 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">07:15 PM</span>
+                  <span class="borderbox showtime regular other">07:30 PM</span>
+                  <span class="borderbox showtime regular other">10:45 PM</span>
+                  <span class="borderbox showtime regular other">11:00 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="otherclass">
+            <span class="image">
+                    <img alt="The Good, the Bad and the Ugly" src="https://upload.wikimedia.org/wikipedia/en/4/45/Good_the_bad_and_the_ugly_poster.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=The Good, the Bad and the Ugly">The Good, the Bad and the Ugly</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">07:30 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">07:30 PM</span>
+                  <span class="borderbox showtime regular other">07:45 PM</span>
+                  <span class="borderbox showtime regular other">11:00 PM</span>
+                  <span class="borderbox showtime regular other">11:15 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="otherclass">
+            <span class="image">
+                    <img alt="12 Angry Men" src="https://upload.wikimedia.org/wikipedia/en/9/91/12_angry_men.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=12 Angry Men">12 Angry Men</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">07:45 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">07:45 PM</span>
+                  <span class="borderbox showtime regular other">08:00 PM</span>
+                  <span class="borderbox showtime regular other">11:15 PM</span>
+                  <span class="borderbox showtime regular other">11:30 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="otherclass">
+            <span class="image">
+                    <img alt="The Lord of the Rings: The Return of the King" src="https://upload.wikimedia.org/wikipedia/en/9/9d/Lord_of_the_Rings_-_The_Return_of_the_King.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=The Lord of the Rings: The Return of the King">The Lord of the Rings: The Return of the King</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">08:00 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">08:00 PM</span>
+                  <span class="borderbox showtime regular other">08:15 PM</span>
+                  <span class="borderbox showtime regular other">11:30 PM</span>
+                  <span class="borderbox showtime regular other">11:45 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+        <li class="borderbox">
+          <div style="display: flex; justify-content: flex-start" class="otherclass">
+            <span class="image">
+                    <img alt="Fight Club" src="https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg">
+
+            </span>
+            <span>
+              <a class="title" href="/sandbox/moviedetails?movie=Fight Club">Fight Club</a>
+              <div class="theatres">
+                <div class="showtimes">
+                  <span class="theatre">IMAX 3D: </span>
+                  <span class="borderbox showtime imax other">08:15 PM</span>
+                </div>
+                <div class="showtimes">
+                  <span class="theatre">Regular: </span>
+                  <span class="borderbox showtime regular other">08:15 PM</span>
+                  <span class="borderbox showtime regular other">08:30 PM</span>
+                  <span class="borderbox showtime regular other">11:45 PM</span>
+                  <span class="borderbox showtime regular other">12:00 PM</span>
+                </div>
+              </div>
+            </span>
+          </div>
+        </li>
+    </ul>
+  </div>
+  <div class="text-center">
+    <ul class="pagination pagination-lg">
+        <li class="page-item disabled"><a class="page-link" href="">Previous</a></li>
+          <li class="page-item disabled"><a class="page-link" href="">1</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=2">2</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=3">3</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=4">4</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=5">5</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=6">6</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=7">7</a></li>
+          <li class="page-item"><a class="page-link" href="/sandbox/showtimes?page=8">8</a></li>
+        <li class="page-item"><a class="page-link btn-next" href="/sandbox/showtimes?page=2">Next</a></li>
+    </ul>
+  </div>
+</div>
+
+
+</div>
+</body>
+</html>
